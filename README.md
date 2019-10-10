@@ -8,7 +8,7 @@ sudo apt-get update
 sudo apt install ./qt5-opengl-dev_5.12.5_armhf.deb
 export QT_SELECT=qt5-opengl
 ```
-This installs Qt5 in ```/usr/lib/qt5.12/```, and the qtchooser configuration file ```/usr/share/qtchooser/qt5-opengl.conf```
+This installs Qt5 in ```/usr/lib/qt5.12/```, and creates the qtchooser configuration file ```/usr/share/qtchooser/qt5-opengl.conf```
 
 To remove:
 ```
