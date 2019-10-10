@@ -8,6 +8,7 @@ sudo apt-get update
 sudo apt install ./qt5-opengl-dev_5.12.5_armhf.deb
 export QT_SELECT=qt5-opengl
 ```
+This installs Qt5 in ```/usr/lib/qt5.12/```, and the qtchooser configuration file ```/usr/share/qtchooser/qt5-opengl.conf```
 To remove:
 ```
 dpkg -r qt5-opengl-dev
@@ -30,7 +31,7 @@ update-locale en_US.UTF-8
 apt-get update
 apt-get install libgl1-mesa-dev libglu1-mesa-dev mesa-common-dev
 ```
-###For qt:
+### For qt:
 ```
 apt-get install build-essential git libfontconfig1-dev libdbus-1-dev libfreetype6-dev libicu-dev libinput-dev libxkbcommon-dev libsqlite3-dev libssl-dev libpng-dev libjpeg-dev libglib2.0-dev libraspberrypi-dev libcups2-dev libasound2-dev
 ```
