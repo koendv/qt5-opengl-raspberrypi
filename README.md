@@ -14,6 +14,7 @@ To remove:
 ```
 dpkg -r qt5-opengl-dev
 ```
+This completes the installation instructions.
 
 ## Build Notes
 These are notes for a native build of Qt5 on a Raspberry Pi 4, 4GB ram. Compilation takes 10 hours.
@@ -152,6 +153,8 @@ Create the debian package:
 ```
 fakeroot dpkg-deb -b ./deb/ .
  ```
- This completes building the debian package. 
+ This produces the debian package file ```qt5-opengl-dev_5.12.5_armhf.deb```
+ 
+ This completes the build notes.
 ## See Also
 [Building Qt 5.12 LTS for Raspberry Pi on Raspbian](https://www.tal.org/tutorials/building-qt-512-raspberry-pi)
