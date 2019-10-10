@@ -2,13 +2,19 @@
 This package installs Qt5.12 LTS "long term support" with desktop OpenGL on a raspberry pi 4 running Raspbian Buster. The package is suitable for compiling desktop-style, windowed Qt apps under X11. The OpenGL support is in software, using Mesa. 
 
 ## Install Instructions
-To install, download [qt5-opengl-dev_5.12.5_armhf.deb](https://github.com/koendv/openscad-raspberrypi/releases/download/v1.0/qt5-opengl-dev_5.12.5_armhf.deb) and type:
+To install, download [qt5-opengl-dev_5.12.5_armhf.deb](https://github.com/koendv/qt5-opengl-raspberrypi/releases/tag/v1.0) and type:
 ```
+sudo apt-get update
 sudo apt install ./qt5-opengl-dev_5.12.5_armhf.deb
 export QT_SELECT=qt5-opengl
 ```
+To remove:
+```
+dpkg -r qt5-opengl-dev
+```
 
 ## Build Notes
+These are notes for a native build of Qt5 on a Raspberry Pi 4, 4GB ram. Compilation takes 10 hours.
 
 Beginning with a clean [2019-09-26-raspbian-buster-lite](https://www.raspberrypi.org/downloads/raspbian/)
 
