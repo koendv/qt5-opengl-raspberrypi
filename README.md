@@ -17,7 +17,7 @@ dpkg -r qt5-opengl-dev
 This completes the installation instructions.
 
 ## Build Notes
-These are notes for a native build of Qt5 on a Raspberry Pi 4, 4GB ram. Compilation takes 10 hours.
+These are notes for a native build of Qt5 on a Raspberry Pi 4, 4GB ram. 
 
 Beginning with a clean [2019-09-26-raspbian-buster-lite](https://www.raspberrypi.org/downloads/raspbian/)
 
