@@ -2,7 +2,7 @@
 This package installs Qt5.12 LTS "long term support" with desktop OpenGL on a raspberry pi 4 running Raspbian Buster. The package is suitable for compiling desktop-style, windowed Qt apps under X11. The OpenGL support is in software, using Mesa. 
 
 ## Install Instructions
-To install, download [qt5-opengl-dev_5.12.5_armhf.deb](https://github.com/koendv/qt5-opengl-raspberrypi/releases/tag/v1.0) and type:
+To install, download [qt5-opengl-dev_5.12.5_armhf.deb](https://github.com/koendv/qt5-opengl-raspberrypi/releases/tag/v2.0) and type:
 ```
 sudo apt-get update
 sudo apt install ./qt5-opengl-dev_5.12.5_armhf.deb
@@ -27,16 +27,24 @@ perl -pi -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen
 locale-gen en_US.UTF-8
 update-locale en_US.UTF-8
 ```
-## Install Prerequisites 
-### For mesa:
+## Prerequisite Packages
+
+For Mesa:
 ```
 apt-get update
 apt-get install libgl1-mesa-dev libglu1-mesa-dev mesa-common-dev
 ```
-### For qt:
+
+For Qt:
 ```
 apt-get install build-essential git libfontconfig1-dev libdbus-1-dev libfreetype6-dev libicu-dev libinput-dev libxkbcommon-dev libsqlite3-dev libssl-dev libpng-dev libjpeg-dev libglib2.0-dev libraspberrypi-dev libcups2-dev libasound2-dev
 ```
+
+For QtWebengine:
+```
+apt-get install libfontconfig1-dev libfreetype6-dev libx11-dev libxext-dev libxfixes-dev libxi-dev libxrender-dev libxcb1-dev libx11-xcb-dev libxcb-glx0-dev libxkbcommon-x11-dev libxcb-keysyms1-dev libxcb-image0-dev libxcb-shm0-dev libxcb-icccm4-dev libxcb-sync0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-randr0-dev libxcb-render-util0-dev libnss3-dev libxcomposite-dev libxcursor-dev libxtst-dev libxrandr-dev gperf bison flex ninja-build 
+```
+
 ## Build qt5
 ### Download sources
 ```
@@ -98,7 +106,6 @@ PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig:/usr/share/pkgconfig \
 -force-pkg-config \
 -nomake examples -no-compile-examples \
 -skip qtwayland \
--skip qtwebengine \
 -no-feature-geoservices_mapboxgl \
 -qt-pcre \
 -no-pch \
@@ -110,11 +117,20 @@ PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig:/usr/share/pkgconfig \
 -prefix /usr/lib/qt5.12  \
 -qpa eglfs
 ```
-build:
+To reduce memory usage when compiling, edit ```build-qt/qtwebengine/src/core/Makefile.gn_run``` and change the options to *ninja* from 
+```
+build-qt/qtwebengine/src/3rdparty/ninja/ninja -v -C 
+```
+to
+```
+build-qt/qtwebengine/src/3rdparty/ninja/ninja -j2 -v -C 
+```
+
+To build, in ```build-qt``` type:
 ```
 make
 ```
-(wait 10 hours)
+Compilation may take considerable time.
 
 ### Create debian package
 In the  ```src/build-qt``` directory:
@@ -141,7 +157,7 @@ Priority: optional
 Section: libs
 Bugs: https://github.com/koendv/qt5-opengl-raspberrypi/issues
 Homepage: https://github.com/koendv/qt5-opengl-raspberrypi
-Depends: qtchooser, libgl1-mesa-dev, libglu1-mesa-dev, mesa-common-dev, libfontconfig1-dev, libdbus-1-dev, libfreetype6-dev, libicu-dev, libinput-dev, libxkbcommon-dev, libsqlite3-dev, libssl-dev, libpng-dev, libjpeg-dev, libglib2.0-dev, libraspberrypi-dev, libcups2-dev, libasound2-dev
+Depends: qtchooser, libgl1-mesa-dev, libglu1-mesa-dev, mesa-common-dev, libfontconfig1-dev, libdbus-1-dev, libfreetype6-dev, libicu-dev, libinput-dev, libxkbcommon-dev, libsqlite3-dev, libssl-dev, libpng-dev, libjpeg-dev, libglib2.0-dev, libraspberrypi-dev, libcups2-dev, libasound2-dev, libfontconfig1-dev, libfreetype6-dev, libx11-dev, libxext-dev, libxfixes-dev, libxi-dev, libxrender-dev, libxcb1-dev, libx11-xcb-dev, libxcb-glx0-dev, libxkbcommon-x11-dev, libxcb-keysyms1-dev, libxcb-image0-dev, libxcb-shm0-dev, libxcb-icccm4-dev, libxcb-sync0-dev, libxcb-xfixes0-dev, libxcb-shape0-dev, libxcb-randr0-dev, libxcb-render-util0-dev, libnss3-dev, libxcomposite-dev, libxcursor-dev, libxtst-dev, libxrandr-dev, gperf, bison, flex, ninja-build
 Architecture: armhf
 Description: Qt5.12 LTS with desktop OpenGL
  Qt5.12 LTS "long term support" with desktop OpenGL,
