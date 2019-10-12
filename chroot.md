@@ -1,4 +1,4 @@
-#Setting up a chroot on raspbian
+# Setting up a chroot on raspbian
 
 Download Raspbian Image
 ```
