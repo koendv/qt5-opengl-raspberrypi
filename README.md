@@ -6,9 +6,13 @@ To install, download [qt5-opengl-dev_5.12.5_armhf.deb](https://github.com/koendv
 ```
 sudo apt-get update
 sudo apt install ./qt5-opengl-dev_5.12.5_armhf.deb
+```
+This installs Qt5 in ```/usr/lib/qt5.12/```.
+
+This also creates the qtchooser configuration file ```/usr/share/qtchooser/qt5-opengl.conf```. If *qtchooser* has been installed on the system, you can select Qt5.12 LTS with
+```
 export QT_SELECT=qt5-opengl
 ```
-This installs Qt5 in ```/usr/lib/qt5.12/```, and creates the qtchooser configuration file ```/usr/share/qtchooser/qt5-opengl.conf```
 
 To remove:
 ```
@@ -117,6 +121,8 @@ PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig:/usr/share/pkgconfig \
 -prefix /usr/lib/qt5.12  \
 -qpa eglfs
 ```
+Check the[configuration summary](summary.txt)
+
 To reduce memory usage when compiling, edit ```build-qt/qtwebengine/src/core/Makefile.gn_run``` and change the options to *ninja* from 
 ```
 build-qt/qtwebengine/src/3rdparty/ninja/ninja -v -C 
@@ -157,7 +163,7 @@ Priority: optional
 Section: libs
 Bugs: https://github.com/koendv/qt5-opengl-raspberrypi/issues
 Homepage: https://github.com/koendv/qt5-opengl-raspberrypi
-Depends: qtchooser, libgl1-mesa-dev, libglu1-mesa-dev, mesa-common-dev, libfontconfig1-dev, libdbus-1-dev, libfreetype6-dev, libicu-dev, libinput-dev, libxkbcommon-dev, libsqlite3-dev, libssl-dev, libpng-dev, libjpeg-dev, libglib2.0-dev, libraspberrypi-dev, libcups2-dev, libasound2-dev, libfontconfig1-dev, libfreetype6-dev, libx11-dev, libxext-dev, libxfixes-dev, libxi-dev, libxrender-dev, libxcb1-dev, libx11-xcb-dev, libxcb-glx0-dev, libxkbcommon-x11-dev, libxcb-keysyms1-dev, libxcb-image0-dev, libxcb-shm0-dev, libxcb-icccm4-dev, libxcb-sync0-dev, libxcb-xfixes0-dev, libxcb-shape0-dev, libxcb-randr0-dev, libxcb-render-util0-dev, libnss3-dev, libxcomposite-dev, libxcursor-dev, libxtst-dev, libxrandr-dev, gperf, bison, flex, ninja-build
+Depends: libgl1-mesa-dev, libglu1-mesa-dev, mesa-common-dev, libfontconfig1-dev, libdbus-1-dev, libfreetype6-dev, libicu-dev, libinput-dev, libxkbcommon-dev, libsqlite3-dev, libssl-dev, libpng-dev, libjpeg-dev, libglib2.0-dev, libraspberrypi-dev, libcups2-dev, libasound2-dev, libfontconfig1-dev, libfreetype6-dev, libx11-dev, libxext-dev, libxfixes-dev, libxi-dev, libxrender-dev, libxcb1-dev, libx11-xcb-dev, libxcb-glx0-dev, libxkbcommon-x11-dev, libxcb-keysyms1-dev, libxcb-image0-dev, libxcb-shm0-dev, libxcb-icccm4-dev, libxcb-sync0-dev, libxcb-xfixes0-dev, libxcb-shape0-dev, libxcb-randr0-dev, libxcb-render-util0-dev, libnss3-dev, libxcomposite-dev, libxcursor-dev, libxtst-dev, libxrandr-dev, gperf, bison, flex, ninja-build
 Architecture: armhf
 Description: Qt5.12 LTS with desktop OpenGL
  Qt5.12 LTS "long term support" with desktop OpenGL,
