@@ -2,7 +2,7 @@
 This package installs Qt5.12 LTS "long term support" with desktop OpenGL on a raspberry pi 4 running Raspbian Buster. The package is suitable for compiling desktop-style, windowed Qt apps under X11. The OpenGL support is in software, using Mesa. 
 
 ## Install Instructions
-To install, download [qt5-opengl-dev_5.12.5_armhf.deb](https://github.com/koendv/qt5-opengl-raspberrypi/releases/tag/v5.12.5–1) and type:
+To install, download [qt5-opengl-dev_5.12.5_armhf.deb](https://github.com/koendv/qt5-opengl-raspberrypi/releases/download/v5.12.5-1/qt5-opengl-dev_5.12.5_armhf.deb) and type:
 ```
 sudo apt-get update
 sudo apt install ./qt5-opengl-dev_5.12.5_armhf.deb
