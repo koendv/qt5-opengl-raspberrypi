@@ -121,7 +121,7 @@ PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig:/usr/share/pkgconfig \
 -prefix /usr/lib/qt5.12  \
 -qpa eglfs
 ```
-Check the[configuration summary](summary.txt)
+Check the [configuration summary](summary.txt)
 
 To reduce memory usage when compiling, edit ```build-qt/qtwebengine/src/core/Makefile.gn_run``` and change the options to *ninja* from 
 ```
