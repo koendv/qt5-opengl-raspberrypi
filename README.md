@@ -180,3 +180,8 @@ fakeroot dpkg-deb -b ./deb/ .
  This completes the build notes.
 ## See Also
 [Building Qt 5.12 LTS for Raspberry Pi on Raspbian](https://www.tal.org/tutorials/building-qt-512-raspberry-pi)
+
+[chroot on raspbian notes](chroot.md). For convenience, I build software like this in a *chroot* and bundle the applications as an [AppImage](http://www.appimage.org)
+
+
+
