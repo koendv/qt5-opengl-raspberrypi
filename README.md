@@ -25,12 +25,6 @@ These are notes for a native build of Qt5 on a Raspberry Pi 4, 4GB ram.
 
 Beginning with a clean [2019-09-26-raspbian-buster-lite](https://www.raspberrypi.org/downloads/raspbian/)
 
-## Fix Locale
-```
-perl -pi -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen
-locale-gen en_US.UTF-8
-update-locale en_US.UTF-8
-```
 ## Prerequisite Packages
 
 For Mesa:
@@ -174,14 +168,16 @@ EOD
 Create the debian package:
 ```
 fakeroot dpkg-deb -b ./deb/ .
- ```
+```
+ 
  This produces the debian package file ```qt5-opengl-dev_5.12.5_armhf.deb```
  
  This completes the build notes.
+ 
 ## See Also
 [Building Qt 5.12 LTS for Raspberry Pi on Raspbian](https://www.tal.org/tutorials/building-qt-512-raspberry-pi)
 
-[chroot on raspbian notes](chroot.md). For convenience, I build software like this in a *chroot* and bundle the applications as an [AppImage](http://www.appimage.org)
+For convenience, I build software like this in a *chroot* and bundle the applications as an [AppImage](http://www.appimage.org). Setting up a [chroot on raspbian](chroot.md). 
 
 
 
