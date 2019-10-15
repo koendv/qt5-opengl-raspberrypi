@@ -130,7 +130,7 @@ To build, in ```build-qt``` type:
 ```
 make
 ```
-Compilation may take a day.
+Compilation takes less than a day.
 
 ### Create debian package
 In the  ```src/build-qt``` directory:
