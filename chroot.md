@@ -49,7 +49,7 @@ perl -pi -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen
 locale-gen en_US.UTF-8
 update-locale en_US.UTF-8
 ```
-Do stuff and ...
+At this point, the chroot is ready for use. Do whatever you wanted to do in the chroot. Afterwards, exit the chroot.
 ```
 exit
 ```
