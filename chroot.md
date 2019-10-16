@@ -19,7 +19,7 @@ losetup -P /dev/loop0 chroot.img
 ```
 Check file system
 ```
-e2fsck -f /dev/loop0p2
+e2fsck -y -f /dev/loop0p2
 ```
 Expand partition
 ```
@@ -49,7 +49,7 @@ perl -pi -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen
 locale-gen en_US.UTF-8
 update-locale en_US.UTF-8
 ```
-Do stuff...
+Do stuff and ...
 ```
 exit
 ```
@@ -65,4 +65,8 @@ Unmount loop device
 ```
 losetup -d /dev/loop0
 ```
+
 [Source](https://wiki.debian.org/RaspberryPi/qemu-user-static)
+
+Not truncated.
+
