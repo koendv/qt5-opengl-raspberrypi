@@ -9,7 +9,7 @@ ii  qt5-opengl-dev       5.12.5       armhf       Qt5.12 LTS with desktop OpenGL
 ```
 If not, install ```qt5-opengl-dev_5.12.5_armhf.deb``` first.
 
-To install qtcreator 4.9.1, download [qt5-opengl-qtcreator_4.9.1_armhf.deb](https://github.com/koendv/qt5-opengl-raspberrypi/releases/download/v5.12.5-1/qt5-opengl-qtcreator_4.9.1_armhf.deb) type:
+To install qtcreator 4.9.1, download [qt5-opengl-qtcreator_4.9.1_armhf.deb](https://github.com/koendv/qt5-opengl-raspberrypi/releases/download/v5.12.5-1/qt5-opengl-qtcreator_4.9.1_armhf.deb) and type:
 ```
 sudo apt install ./qt5-opengl-qtcreator_4.9.1_armhf.deb
 ```
