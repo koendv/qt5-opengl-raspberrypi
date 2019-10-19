@@ -22,7 +22,7 @@ To remove:
 dpkg -r qt5-opengl-dev
 ```
 ### Install qtcreator
-If you wish to install the qtcreator IDE as well, download [qt5-opengl-qtcreator_4.9.1_armhf.deb](https://github.com/koendv/qt5-opengl-raspberrypi/releases/download/v5.12.5-1/qt5-opengl-qtcreator_4.9.1_armhf.deb) and type:
+If, after installing Qt5.12 libraries and includes, you wish to install the qtcreator IDE as well, download [qt5-opengl-qtcreator_4.9.1_armhf.deb](https://github.com/koendv/qt5-opengl-raspberrypi/releases/download/v5.12.5-1/qt5-opengl-qtcreator_4.9.1_armhf.deb) and type:
 ```
 sudo apt install ./qt5-opengl-qtcreator_4.9.1_armhf.deb
 ```
