@@ -2,24 +2,7 @@
 These are notes for a native build of QtCreator 4.9.1 on a Raspberry Pi 4, 4GB ram, running Raspbian Buster. 
 
 ## Install Instructions
-Make sure the companion package ```qt5-opengl-dev_5.12.5_armhf.deb``` is installed on your system:
-```
- $ dpkg -l | grep qt5-opengl
-ii  qt5-opengl-dev       5.12.5       armhf       Qt5.12 LTS with desktop OpenGL
-```
-If not, install ```qt5-opengl-dev_5.12.5_armhf.deb``` first.
-
-To install qtcreator 4.9.1, download [qt5-opengl-qtcreator_4.9.1_armhf.deb](https://github.com/koendv/qt5-opengl-raspberrypi/releases/download/v5.12.5-1/qt5-opengl-qtcreator_4.9.1_armhf.deb) and type:
-```
-sudo apt install ./qt5-opengl-qtcreator_4.9.1_armhf.deb
-```
-This installs qtcreator in ```/usr/lib/qt5.12/bin/```.
-
-To remove:
-```
-dpkg -r qt5-opengl-qtcreator
-```
-This completes the installation instructions.
+See [Qt5.12 Install Instructions](https://github.com/koendv/qt5-opengl-raspberrypi/blob/master/README.md#install-instructions).
 
 ## Prerequisites
 
