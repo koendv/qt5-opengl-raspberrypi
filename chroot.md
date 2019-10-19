@@ -9,9 +9,9 @@ Extract Raspbian image
 unzip 2019-09-26-raspbian-buster.zip
 mv 2019-09-26-raspbian-buster.img chroot.img
 ```
-Add 8gb disk space
+Add disk space for 16gb sdcard
 ```
-dd if=/dev/zero bs=1M count=8192 >> chroot.img
+fallocate -l 16g chroot.img
 ```
 Set up image as loop device
 ```
