@@ -2,6 +2,7 @@
 This package installs Qt5.12 LTS "long term support" with desktop OpenGL on a raspberry pi 4 running Raspbian Buster. The package is suitable for compiling desktop-style, windowed Qt apps under X11. The OpenGL support is in software, using Mesa. 
 
 ## Install Instructions
+### Install Qt5.12 libraries and includes
 To install, download [qt5-opengl-dev_5.12.5_armhf.deb](https://github.com/koendv/qt5-opengl-raspberrypi/releases/download/v5.12.5-1/qt5-opengl-dev_5.12.5_armhf.deb) and type:
 ```
 sudo apt-get update
@@ -18,6 +19,18 @@ To remove:
 ```
 dpkg -r qt5-opengl-dev
 ```
+### Install qtcreator
+If you wish to install the qtcreator IDE as well, download [qt5-opengl-qtcreator_4.9.1_armhf.deb](https://github.com/koendv/qt5-opengl-raspberrypi/releases/download/v5.12.5-1/qt5-opengl-qtcreator_4.9.1_armhf.deb) and type:
+```
+sudo apt install ./qt5-opengl-qtcreator_4.9.1_armhf.deb
+```
+This installs qtcreator in ```/usr/lib/qt5.12/bin/```.
+
+To remove:
+```
+dpkg -r qt5-opengl-qtcreator
+```
+
 This completes the installation instructions.
 
 ## Build Notes
@@ -175,9 +188,11 @@ fakeroot dpkg-deb -b ./deb/ .
  This completes the build notes.
  
 ## See Also
-[Building Qt 5.12 LTS for Raspberry Pi on Raspbian](https://www.tal.org/tutorials/building-qt-512-raspberry-pi)
 
 For convenience, I build software like this in a *chroot* and bundle the applications as an [AppImage](http://www.appimage.org). Setting up a [chroot on raspbian](chroot.md). 
+
+[Building Qt 5.12 LTS for Raspberry Pi on Raspbian](https://www.tal.org/tutorials/building-qt-512-raspberry-pi)
+
 
 
 
