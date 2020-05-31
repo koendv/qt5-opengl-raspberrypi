@@ -7,7 +7,7 @@ Optionally the QtCreator 4.9.1 IDE can be installed as well.
 ### Install Qt5.12 libraries and includes
 To install, download [qt5-opengl-dev_5.12.5_armhf.deb](https://github.com/koendv/qt5-opengl-raspberrypi/releases/download/v5.12.5-1/qt5-opengl-dev_5.12.5_armhf.deb) and type:
 ```
-sudo apt-get update
+sudo apt update
 sudo apt install ./qt5-opengl-dev_5.12.5_armhf.deb
 ```
 This installs Qt5 in ```/usr/lib/qt5.12/```.
@@ -44,18 +44,18 @@ Beginning with a clean [2019-09-26-raspbian-buster-lite](https://www.raspberrypi
 
 For Mesa:
 ```
-apt-get update
-apt-get install libgl1-mesa-dev libglu1-mesa-dev mesa-common-dev
+apt update
+apt install libgl1-mesa-dev libglu1-mesa-dev mesa-common-dev
 ```
 
 For Qt:
 ```
-apt-get install build-essential git libfontconfig1-dev libdbus-1-dev libfreetype6-dev libicu-dev libinput-dev libxkbcommon-dev libsqlite3-dev libssl-dev libpng-dev libjpeg-dev libglib2.0-dev libraspberrypi-dev libcups2-dev libasound2-dev
+apt install build-essential git libfontconfig1-dev libdbus-1-dev libfreetype6-dev libicu-dev libinput-dev libxkbcommon-dev libsqlite3-dev libssl-dev libpng-dev libjpeg-dev libglib2.0-dev libraspberrypi-dev libcups2-dev libasound2-dev
 ```
 
 For QtWebengine:
 ```
-apt-get install libfontconfig1-dev libfreetype6-dev libx11-dev libxext-dev libxfixes-dev libxi-dev libxrender-dev libxcb1-dev libx11-xcb-dev libxcb-glx0-dev libxkbcommon-x11-dev libxcb-keysyms1-dev libxcb-image0-dev libxcb-shm0-dev libxcb-icccm4-dev libxcb-sync0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-randr0-dev libxcb-render-util0-dev libnss3-dev libxcomposite-dev libxcursor-dev libxtst-dev libxrandr-dev gperf bison flex ninja-build 
+apt install libXdamage-dev libfontconfig1-dev libfreetype6-dev libx11-dev libxext-dev libxfixes-dev libxi-dev libxrender-dev libxcb1-dev libx11-xcb-dev libxcb-glx0-dev libxkbcommon-x11-dev libxcb-keysyms1-dev libxcb-image0-dev libxcb-shm0-dev libxcb-icccm4-dev libxcb-sync0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-randr0-dev libxcb-render-util0-dev libnss3-dev libxcomposite-dev libxcursor-dev libxtst-dev libxrandr-dev gperf bison flex ninja-build 
 ```
 
 ## Build qt5
