@@ -1,61 +1,38 @@
-# Qt5.12 LTS with OpenGL for Raspberry
-This package installs Qt5.12 LTS "long term support" with desktop OpenGL on a raspberry pi 4 running Raspbian Buster. The package is suitable for compiling desktop-style, windowed Qt apps under X11. The OpenGL support is in software, using Mesa. 
-
-Optionally the QtCreator 4.9.1 IDE can be installed as well.
+# Qt5.15.2 LTS with OpenGL for Raspberry
+This package installs Qt5.15.2 LTS "long term support" with desktop OpenGL , compiled on a raspberry pi 4 running Raspberry Pi OS [2021-01-11-raspios-buster-armhf](https://www.raspberrypi.org/software/operating-systems/) (32 bit). The package is suitable for compiling desktop-style, windowed Qt apps under X11. The OpenGL support is in software, using Mesa. 
 
 ## Install Instructions
-### Install Qt5.12 libraries and includes
-To install, download [qt5-opengl-dev_5.12.5_armhf.deb](https://github.com/koendv/qt5-opengl-raspberrypi/releases/download/v5.12.5-1/qt5-opengl-dev_5.12.5_armhf.deb) and type:
+### Install Qt5.15.2 libraries and includes
+To install, download the [qt5-opengl-dev_5.15.2_armhf.deb](https://github.com/koendv/qt5-opengl-raspberrypi/releases) and type:
 ```
 sudo apt update
-sudo apt install ./qt5-opengl-dev_5.12.5_armhf.deb
+sudo apt --fix-broken  install ./qt5-opengl-dev_5.15.2_armhf.deb
 ```
-This installs Qt5 in ```/usr/lib/qt5.12/```.
+This installs Qt5 in ```/usr/lib/qt5.15.2/```.
 
-This also creates the qtchooser configuration file ```/usr/share/qtchooser/qt5-opengl.conf```. If *qtchooser* has been installed on the system, you can select Qt5.12 LTS with
+This also creates the qtchooser configuration file ```/usr/share/qtchooser/qt5.15.2-opengl.conf```. If *qtchooser* has been installed on the system, you can select Qt5.15.2 LTS with
 ```
-export QT_SELECT=qt5-opengl
+export QT_SELECT=qt5.15.2-opengl
 ```
-
-To remove:
-```
-dpkg -r qt5-opengl-dev
-```
-### Install qtcreator
-If, after installing Qt5.12 libraries and includes, you wish to install the qtcreator IDE as well, download [qt5-opengl-qtcreator_4.9.1_armhf.deb](https://github.com/koendv/qt5-opengl-raspberrypi/releases/download/v5.12.5-1/qt5-opengl-qtcreator_4.9.1_armhf.deb) and type:
-```
-sudo apt install ./qt5-opengl-qtcreator_4.9.1_armhf.deb
-```
-This installs qtcreator in ```/usr/lib/qt5.12/bin/```.
 
 To remove:
 ```
-dpkg -r qt5-opengl-qtcreator
+dpkg -r qt5.15.2-opengl-dev
 ```
 
 This completes the installation instructions.
 
 ## Build Notes
-These are notes for a native build of Qt5 on a Raspberry Pi 4, 4GB ram. 
+These are notes for a native build of Qt5 on a Raspberry Pi 4, 8GB ram. 
 
-Beginning with a clean [2019-09-26-raspbian-buster-lite](https://www.raspberrypi.org/downloads/raspbian/)
+Beginning with a clean Raspberry Pi OS [2021-01-11-raspios-buster-armhf](https://www.raspberrypi.org/software/operating-systems/).
 
 ## Prerequisite Packages
 
-For Mesa:
+Install the following packages:
 ```
 apt update
-apt install libgl1-mesa-dev libglu1-mesa-dev mesa-common-dev
-```
-
-For Qt:
-```
-apt install build-essential git libfontconfig1-dev libdbus-1-dev libfreetype6-dev libicu-dev libinput-dev libxkbcommon-dev libsqlite3-dev libssl-dev libpng-dev libjpeg-dev libglib2.0-dev libraspberrypi-dev libcups2-dev libasound2-dev
-```
-
-For QtWebengine:
-```
-apt install libxdamage-dev libfontconfig1-dev libfreetype6-dev libx11-dev libxext-dev libxfixes-dev libxi-dev libxrender-dev libxcb1-dev libx11-xcb-dev libxcb-glx0-dev libxkbcommon-x11-dev libxcb-keysyms1-dev libxcb-image0-dev libxcb-shm0-dev libxcb-icccm4-dev libxcb-sync0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-randr0-dev libxcb-render-util0-dev libnss3-dev libxcomposite-dev libxcursor-dev libxtst-dev libxrandr-dev gperf bison flex ninja-build 
+apt-get install bison build-essential flex git gperf libasound2-dev libcups2-dev libdbus-1-dev libfontconfig1-dev libfreetype6-dev libgl1-mesa-dev libglib2.0-dev libglu1-mesa-dev libharfbuzz-dev libicu-dev libinput-dev libjpeg-dev libnss3-dev libpng-dev libpulse-dev libraspberrypi-dev libsqlite3-dev libssl-dev libx11-dev libx11-xcb-dev libxcb-composite0-dev libxcb-cursor-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-dri2-0-dev libxcb-dri3-dev libxcb-ewmh-dev libxcb-glx0-dev libxcb-icccm4-dev libxcb-image0-dev libxcb-imdkit-dev libxcb-keysyms1-dev libxcb-present-dev libxcb-randr0-dev libxcb-record0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-res0-dev libxcb-screensaver0-dev libxcb-shape0-dev libxcb-shm0-dev libxcb-sync-dev libxcb-util0-dev libxcb-xf86dri0-dev libxcb-xfixes0-dev libxcb-xinerama0-dev libxcb-xinput-dev libxcb-xkb-dev libxcb-xrm-dev libxcb-xtest0-dev libxcb-xv0-dev libxcb-xvmc0-dev libxcomposite-dev libxcursor-dev libxdamage-dev libxext-dev libxfixes-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev libxrandr-dev libxrender-dev libxtst-dev mesa-common-dev ninja-build
 ```
 
 ## Build qt5
@@ -63,37 +40,23 @@ apt install libxdamage-dev libfontconfig1-dev libfreetype6-dev libx11-dev libxex
 ```
 mkdir src
 cd src
-wget http://download.qt.io/official_releases/qt/5.12/5.12.5/single/qt-everywhere-src-5.12.5.tar.xz
-tar xf qt-everywhere-src-5.12.5.tar.xz
+wget https://download.qt.io/official_releases/qt/5.15/5.15.2/single/qt-everywhere-src-5.15.2.tar.xz
+tar xf qt-everywhere-src-5.15.2.tar.xz
 ```
 ### Get qt5 mkspecs for raspberry
 ```
 git clone https://github.com/oniongarlic/qt-raspberrypi-configuration.git
 cd qt-raspberrypi-configuration
-make install DESTDIR=../qt-everywhere-src-5.12.5
+make install DESTDIR=../qt-everywhere-src-5.15.2
 cd ..
 ```
 ### Compile
 In src directory, patch qt:
 ```
-ls qt-everywhere-src-5.12.5
 patch -p0 << EOD
-diff -rBNu qt-everywhere-src-5.12.5/qtbase/src/plugins/platforms/xcb/gl_integrations/xcb_egl/qxcbeglwindow.cpp qt-everywhere-src-5.12.5.OLD/qtbase/src/plugins/platforms/xcb/gl_integrations/xcb_egl/qxcbeglwindow.cpp
---- qt-everywhere-src-5.12.5/qtbase/src/plugins/platforms/xcb/gl_integrations/xcb_egl/qxcbeglwindow.cpp	2019-09-03 20:52:35.000000000 +0200
-+++ qt-everywhere-src-5.12.5.OLD/qtbase/src/plugins/platforms/xcb/gl_integrations/xcb_egl/qxcbeglwindow.cpp	2019-09-30 16:03:17.831619246 +0200
-@@ -93,7 +93,7 @@
- {
-     QXcbWindow::create();
- 
--    m_surface = eglCreateWindowSurface(m_glIntegration->eglDisplay(), m_config, m_window, 0);
-+    m_surface = eglCreateWindowSurface(m_glIntegration->eglDisplay(), m_config, (void*)m_window, 0);
- }
- 
- QT_END_NAMESPACE
-diff -rBNu qt-everywhere-src-5.12.5/qtscript/src/3rdparty/javascriptcore/JavaScriptCore/wtf/Platform.h qt-everywhere-src-5.12.5.OLD/qtscript/src/3rdparty/javascriptcore/JavaScriptCore/wtf/Platform.h
---- qt-everywhere-src-5.12.5/qtscript/src/3rdparty/javascriptcore/JavaScriptCore/wtf/Platform.h	2019-08-23 12:28:19.000000000 +0200
-+++ qt-everywhere-src-5.12.5.OLD/qtscript/src/3rdparty/javascriptcore/JavaScriptCore/wtf/Platform.h	2019-10-01 15:52:01.966516814 +0200
-@@ -367,7 +368,8 @@
+--- ./qt-everywhere-src-5.15.2/qtscript/src/3rdparty/javascriptcore/JavaScriptCore/wtf/Platform.h.ORIG	2021-02-10 21:12:19.025766762 +0100
++++ ./qt-everywhere-src-5.15.2/qtscript/src/3rdparty/javascriptcore/JavaScriptCore/wtf/Platform.h	2021-02-10 21:13:56.784949313 +0100
+@@ -367,7 +367,8 @@
  #    define WTF_CPU_ARM_TRADITIONAL 1
  #    define WTF_CPU_ARM_THUMB2 0
  #  else
@@ -110,10 +73,11 @@ Configure qt for opengl "desktop".
 mkdir build-qt
 cd build-qt
 PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig:/usr/share/pkgconfig \
-../qt-everywhere-src-5.12.5/configure -platform linux-rpi3-g++ \
+../qt-everywhere-src-5.15.2/configure -platform linux-rpi3-g++ \
 -v \
 -opengl desktop -eglfs \
 -no-gtk \
+-xcb -xcb-xlib -bundled-xcb-xinput \
 -opensource -confirm-license -release \
 -reduce-exports \
 -force-pkg-config \
@@ -127,25 +91,20 @@ PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig:/usr/share/pkgconfig \
 -system-freetype \
 -fontconfig \
 -glib \
--prefix /usr/lib/qt5.12  \
+-prefix /usr/lib/qt5.15.2  \
 -qpa eglfs
 ```
-Check the [configuration summary](summary.txt)
-
-To reduce memory usage when compiling, edit ```build-qt/qtwebengine/src/core/Makefile.gn_run``` and change the options to *ninja* from 
+Check the [configuration summary](config_summary.txt) says
 ```
-build-qt/qtwebengine/src/3rdparty/ninja/ninja -v -C 
-```
-to
-```
-build-qt/qtwebengine/src/3rdparty/ninja/ninja -j2 -v -C 
+OpenGL:
+    Desktop OpenGL ....................... yes
 ```
 
 To build, in ```build-qt``` type:
 ```
-make
+make -j4
 ```
-Compilation takes less than a day.
+Compilation takes less than 18 hours.
 
 ### Create debian package
 In the  ```src/build-qt``` directory:
@@ -156,9 +115,9 @@ INSTALL_ROOT=$PWD/deb make install
 Create the configuration file for qtchooser:
 ```
 mkdir -p deb/usr/share/qtchooser/
-cat > deb/usr/share/qtchooser/qt5-opengl.conf <<EOD
-/usr/lib/qt5.12/bin/
-/usr/lib/qt5.12/lib/
+cat > deb/usr/share/qtchooser/qt5.15.2-opengl.conf <<EOD
+/usr/lib/qt5.15.2/bin/
+/usr/lib/qt5.15.2/lib/
 EOD
 ```
 Create the debian control file:
@@ -166,17 +125,17 @@ Create the debian control file:
 mkdir deb/DEBIAN
 cat > deb/DEBIAN/control <<EOD
 Package: qt5-opengl-dev
-Version: 5.12.5
+Version: 5.15.2
 Maintainer: Koen <koen@mcvax.org>
 Priority: optional
 Section: libs
 Bugs: https://github.com/koendv/qt5-opengl-raspberrypi/issues
 Homepage: https://github.com/koendv/qt5-opengl-raspberrypi
-Depends: libgl1-mesa-dev, libglu1-mesa-dev, mesa-common-dev, libfontconfig1-dev, libdbus-1-dev, libfreetype6-dev, libicu-dev, libinput-dev, libxkbcommon-dev, libsqlite3-dev, libssl-dev, libpng-dev, libjpeg-dev, libglib2.0-dev, libraspberrypi-dev, libcups2-dev, libasound2-dev, libfontconfig1-dev, libfreetype6-dev, libx11-dev, libxext-dev, libxfixes-dev, libxi-dev, libxrender-dev, libxcb1-dev, libx11-xcb-dev, libxcb-glx0-dev, libxkbcommon-x11-dev, libxcb-keysyms1-dev, libxcb-image0-dev, libxcb-shm0-dev, libxcb-icccm4-dev, libxcb-sync0-dev, libxcb-xfixes0-dev, libxcb-shape0-dev, libxcb-randr0-dev, libxcb-render-util0-dev, libnss3-dev, libxcomposite-dev, libxcursor-dev, libxtst-dev, libxrandr-dev, gperf, bison, flex, ninja-build
+Depends: bison, build-essential, flex, git, gperf, libasound2-dev, libcups2-dev, libdbus-1-dev, libfontconfig1-dev, libfreetype6-dev, libgl1-mesa-dev, libglib2.0-dev, libglu1-mesa-dev, libharfbuzz-dev, libicu-dev, libinput-dev, libjpeg-dev, libnss3-dev, libpng-dev, libpulse-dev, libraspberrypi-dev, libsqlite3-dev, libssl-dev, libx11-dev, libx11-xcb-dev, libxcb-composite0-dev, libxcb-cursor-dev, libxcb-damage0-dev, libxcb-dpms0-dev, libxcb-dri2-0-dev, libxcb-dri3-dev, libxcb-ewmh-dev, libxcb-glx0-dev, libxcb-icccm4-dev, libxcb-image0-dev, libxcb-imdkit-dev, libxcb-keysyms1-dev, libxcb-present-dev, libxcb-randr0-dev, libxcb-record0-dev, libxcb-render-util0-dev, libxcb-render0-dev, libxcb-res0-dev, libxcb-screensaver0-dev, libxcb-shape0-dev, libxcb-shm0-dev, libxcb-sync-dev, libxcb-util0-dev, libxcb-xf86dri0-dev, libxcb-xfixes0-dev, libxcb-xinerama0-dev, libxcb-xinput-dev, libxcb-xkb-dev, libxcb-xrm-dev, libxcb-xtest0-dev, libxcb-xv0-dev, libxcb-xvmc0-dev, libxcomposite-dev, libxcursor-dev, libxdamage-dev, libxext-dev, libxfixes-dev, libxi-dev, libxkbcommon-dev, libxkbcommon-x11-dev, libxrandr-dev, libxrender-dev, libxtst-dev, mesa-common-dev, ninja-build
 Architecture: armhf
-Description: Qt5.12 LTS with desktop OpenGL
- Qt5.12 LTS "long term support" with desktop OpenGL,
- compiled for raspberry pi 4 running 2019-09-26-raspbian-buster[-lite.]
+Description: Qt5.15.2 LTS with desktop OpenGL
+ Qt5.15.2 LTS "long term support" with desktop OpenGL,
+ compiled on raspberry pi 4 running Raspberry Pi OS [2021-01-11-raspios-buster-armhf.
  The package is suitable for compiling desktop-style, windowed Qt apps under X11. The OpenGL support is in software, using Mesa.
 EOD
 ```
@@ -185,13 +144,15 @@ Create the debian package:
 fakeroot dpkg-deb -b ./deb/ .
 ```
  
- This produces the debian package file ```qt5-opengl-dev_5.12.5_armhf.deb```
+ This produces the debian package file ```./qt5-opengl-dev_5.15.2_armhf.deb```
  
  This completes the build notes.
  
 ## See Also
 
-For convenience, I build software like this in a *chroot* and bundle the applications as an [AppImage](http://www.appimage.org). Setting up a [chroot on raspbian](chroot.md). 
+Setting up a [chroot on raspbian](chroot.md). 
+
+[qt-creator](qt-creator.md) notes
 
 [Building Qt 5.12 LTS for Raspberry Pi on Raspbian](https://www.tal.org/tutorials/building-qt-512-raspberry-pi)
 
