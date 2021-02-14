@@ -22,6 +22,10 @@ dpkg -r qt5.15.2-opengl-dev
 
 This completes the installation instructions.
 
+This is free of charge, but if you want to buy me a cup of tea I'd appreciate:
+
+[![ko-fi](images/kofibutton.svg)](https://ko-fi.com/Q5Q03LPDQ)
+
 ## Build Notes
 These are notes for a native build of Qt5 on a Raspberry Pi 4, 8GB ram. 
 
