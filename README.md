@@ -1,5 +1,5 @@
 # Qt5.15.2 LTS with OpenGL for Raspberry
-This package installs Qt5.15.2 LTS "long term support" with desktop OpenGL , compiled on a raspberry pi 4 running Raspberry Pi OS [2021-01-11-raspios-buster-armhf](https://www.raspberrypi.org/software/operating-systems/) (32 bit). The package is suitable for compiling desktop-style, windowed Qt apps under X11. The OpenGL support is in software, using Mesa. 
+This package installs Qt5.15.2 LTS "long term support" with desktop OpenGL , compiled on a raspberry pi 4 running Raspberry Pi OS [2021-01-11-raspios-buster-armhf](https://www.raspberrypi.org/software/operating-systems/) (32 bit). The package is suitable for compiling desktop-style, windowed Qt apps under X11. The OpenGL support is in software, using Mesa.
 
 ## Install Instructions
 ### Install Qt5.15.2 libraries and includes
@@ -22,12 +22,12 @@ dpkg -r qt5.15.2-opengl-dev
 
 This completes the installation instructions.
 
-This is free of charge, but if you want to buy me a cup of tea I'd appreciate:
+This software is free of charge, of course, but if you want to buy me a cup of tea I'd appreciate:
 
 [![ko-fi](images/kofibutton.svg)](https://ko-fi.com/Q5Q03LPDQ)
 
 ## Build Notes
-These are notes for a native build of Qt5 on a Raspberry Pi 4, 8GB ram. 
+These are notes for a native build of Qt5 on a Raspberry Pi 4, 8GB ram.
 
 Beginning with a clean Raspberry Pi OS [2021-01-11-raspios-buster-armhf](https://www.raspberrypi.org/software/operating-systems/).
 
@@ -147,14 +147,14 @@ Create the debian package:
 ```
 fakeroot dpkg-deb -b ./deb/ .
 ```
- 
+
  This produces the debian package file ```./qt5-opengl-dev_5.15.2_armhf.deb```
- 
+
  This completes the build notes.
- 
+
 ## See Also
 
-Setting up a [chroot on raspbian](chroot.md). 
+Setting up a [chroot on raspbian](chroot.md).
 
 [qt-creator](qt-creator.md) notes
 
