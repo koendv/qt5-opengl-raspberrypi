@@ -22,7 +22,7 @@ dpkg -r qt5.15.2-opengl-dev
 
 This completes the installation instructions.
 
-This software is free of charge, of course, but if you want to buy me a cup of tea I'd appreciate:
+If you like this, maybe you want to buy me a cup of tea:
 
 [![ko-fi](images/kofibutton.svg)](https://ko-fi.com/Q5Q03LPDQ)
 
@@ -155,6 +155,8 @@ fakeroot dpkg-deb -b ./deb/ .
 ## See Also
 
 Setting up a [chroot on raspbian](chroot.md).
+
+[Native Build of Qt5 on a Raspberry Pi](https://wiki.qt.io/Native_Build_of_Qt5_on_a_Raspberry_Pi)
 
 [qt-creator](qt-creator.md) notes
 
