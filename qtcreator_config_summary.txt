@@ -1,0 +1,172 @@
+-- The C compiler identification is GNU 8.3.0
+-- The CXX compiler identification is GNU 8.3.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found elfutils: /usr/include  
+-- Found Zstd: /usr/lib/arm-linux-gnueabihf/libzstd.so  
+-- Found PythonInterp: /usr/bin/python3 (found version "3.7.3") 
+-- The following packages have been found:
+
+ * Qt5PrintSupport
+ * Qt5Qml
+ * Qt5QmlModels (required version >= 5.15.2)
+ * Qt5Quick
+ * Qt5QuickWidgets
+ * Qt5Sql
+ * Qt5LinguistTools
+ * Qt5UiPlugin (required version >= 5.15.2)
+ * Qt5Designer
+ * Qt5DesignerComponents
+ * Qt5Help
+ * Qt5SerialPort
+ * Qt5Svg
+ * Threads
+ * LLVM
+ * Clang
+ * Qt5Concurrent
+ * Qt5Gui
+ * Qt5Network
+ * Qt5Script
+ * Qt5Widgets
+ * Qt5Xml
+ * yaml-cpp, using internal src/libs/3rdparty/yaml-cpp
+ * Qt5Quick3DUtils (required version >= 5.15.2)
+ * Qt5Quick3DRender (required version >= 5.15.2)
+ * Qt5Quick3DAssetImport (required version >= 5.15.2)
+ * Qt5Quick3DRuntimeRender (required version >= 5.15.2)
+ * Qt5Quick3D
+ * Qt5Core
+ * Qt5
+ * elfutils, a collection of utilities and libraries to read, create and modify ELF binary files, <https://sourceware.org/elfutils/>
+ * Zstd
+ * PythonInterp
+
+-- The following packages have not been found:
+
+ * KF5SyntaxHighlighting
+ * Qt5SvgWidgets
+ * Qt5WebEngineWidgets
+ * litehtml
+
+-- The following features have been enabled:
+
+ * Build Qbs, with CONDITION TARGET Qt5::Script
+ * Plugin Core
+ * Script Locator filter, with CONDITION Qt5_VERSION VERSION_GREATER_EQUAL 5.14.0
+ * Plugin TextEditor
+ * Plugin SerialTerminal, with CONDITION TARGET Qt5::SerialPort
+ * Plugin HelloWorld
+ * Plugin ImageViewer
+ * Plugin Marketplace
+ * Plugin UpdateInfo
+ * Plugin Welcome
+ * Plugin BinEditor
+ * Plugin CodePaster
+ * Plugin DiffEditor
+ * Plugin EmacsKeys
+ * Plugin Macros
+ * Plugin ProjectExplorer
+ * Plugin SilverSearcher
+ * Plugin Bookmarks
+ * Plugin CppTools
+ * Plugin Help, with CONDITION TARGET Qt5::Help
+ * litehtml help viewer, with CONDITION TARGET litehtml AND TARGET qlitehtml
+ * Plugin ResourceEditor
+ * Plugin TaskList
+ * Plugin Nim
+ * Plugin Conan
+ * Plugin ClassView
+ * Plugin CppEditor
+ * Plugin GLSLEditor
+ * Plugin ModelEditor
+ * Plugin QtSupport
+ * Plugin Todo
+ * Plugin VcsBase
+ * Plugin Bazaar
+ * Plugin Beautifier
+ * Plugin ClearCase
+ * Plugin CVS
+ * Plugin Designer, with CONDITION TARGET Qt5::DesignerComponents AND TARGET Qt5::Designer
+ * Plugin FakeVim
+ * Plugin GenericProjectManager
+ * Plugin Git
+ * Plugin Mercurial
+ * Plugin MesonProjectManager
+ * Plugin Perforce
+ * Plugin QmakeProjectManager
+ * Plugin QmlJSTools
+ * Plugin QmlProjectManager
+ * Plugin ScxmlEditor
+ * Plugin Subversion
+ * Plugin CompilationDatabaseProjectManager
+ * Plugin LanguageClient
+ * Plugin StudioWelcome
+ * Plugin CMakeProjectManager
+ * Plugin Debugger
+ * Plugin Android
+ * Plugin AutoTest
+ * Plugin AutotoolsProjectManager
+ * Plugin BareMetal
+ * Plugin ClangCodeModel, with CONDITION TARGET libclang
+ * Plugin ClangTools, with CONDITION TARGET yaml-cpp
+ * Plugin Cppcheck
+ * Plugin IncrediBuild
+ * Plugin Ios
+ * Plugin Python
+ * Plugin QmlJSEditor
+ * Plugin QmlPreview
+ * Plugin QmlProfiler
+ * Plugin RemoteLinux
+ * Plugin Valgrind
+ * Plugin WinRt
+ * Plugin PerfProfiler
+ * Plugin QbsProjectManager
+ * Plugin CtfVisualizer
+ * Plugin Boot2Qt
+ * Plugin QmlDesigner
+ * Plugin assetexporterplugin, with CONDITION TARGET QmlDesigner
+ * Plugin componentsplugin, with CONDITION TARGET QmlDesigner
+ * Plugin qmlpreviewplugin, with CONDITION TARGET QmlDesigner
+ * Plugin qtquickplugin, with CONDITION TARGET QmlDesigner
+ * Qt Quick 3D asset import, with CONDITION TARGET Qt5::Quick3DAssetImport
+ * Plugin Qnx
+ * Plugin WebAssembly
+ * Plugin McuSupport
+ * Qt Quick 3D support, with CONDITION TARGET Qt5::Quick3D
+
+-- The following features have been disabled:
+
+ * Build documentation
+ * Build online documentation
+ * Build tests
+ * Native WebKit help viewer, with CONDITION FWWebKit AND FWAppKit AND Qt5_VERSION VERSION_LESS 6.0.0
+ * QtWebEngine help viewer, with CONDITION TARGET Qt5::WebEngineWidgets
+ * Plugin ClangPchManager, with CONDITION TARGET libclang AND QTC_CLANG_BUILDMODE_MATCH
+ * Plugin ClangFormat, with CONDITION TARGET libclang AND LLVM_PACKAGE_VERSION VERSION_GREATER_EQUAL 10.0.0 AND QTC_CLANG_BUILDMODE_MATCH
+ * Plugin ClangRefactoring, with CONDITION TARGET libclang AND QTC_CLANG_BUILDMODE_MATCH
+ * multilanguage-support in qml2puppet, with CONDITION TARGET QtCreator::multilanguage-support
+ * Rust demangler for perfparser, Requires RUSTC_DEMANGLE_INCLUDE_DIR and RUSTC_DEMANGLE_LIBRARY to be specified
+ * Include developer documentation
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/pi/src/build-qt-creator

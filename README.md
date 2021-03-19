@@ -98,7 +98,7 @@ PKG_CONFIG_LIBDIR=/usr/lib/arm-linux-gnueabihf/pkgconfig:/usr/share/pkgconfig \
 -prefix /usr/lib/qt5.15.2  \
 -qpa eglfs
 ```
-Check the [configuration summary](config_summary.txt) says
+Check the [configuration summary](qt_config_summary.txt) says
 ```
 OpenGL:
     Desktop OpenGL ....................... yes
