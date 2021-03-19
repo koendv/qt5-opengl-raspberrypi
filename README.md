@@ -20,6 +20,19 @@ To remove:
 dpkg -r qt5.15.2-opengl-dev
 ```
 
+### Install Qt-creator 4.14.1
+Install Qt5.15.2 first. Then, to install qt-creator in /usr/local/bin, type:
+
+```
+wget https://github.com/koendv/qt5-opengl-raspberrypi/releases/download/v5.15.2-1/qt5-opengl-qtcreator_4.14.1_armhf.deb
+sudo apt --fix-broken  install ./qt5-opengl-qtcreator_4.14.1_armhf.deb
+```
+
+To remove:
+```
+dpkg -r qt5-opengl-qtcreator
+```
+
 This completes the installation instructions.
 
 If you like this, maybe you want to buy me a cup of tea:
