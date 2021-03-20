@@ -10,7 +10,7 @@ Beginning with a clean Raspberry Pi OS [2021-01-11-raspios-buster-armhf](https:/
 wget https://github.com/koendv/qt5-opengl-raspberrypi/releases/download/v5.15.2-1/qt5-opengl-dev_5.15.2_armhf.deb
 sudo apt-get update
 sudo apt --fix-broken  install ./qt5-opengl-dev_5.15.2_armhf.deb
-sudo apt-get install build-essential qtchooser cmake clang-9 libclang-9-dev clang-format-9 ninja-build elfutils libelf-dev libdw-dev libasm-dev libzstd-dev
+sudo apt-get install build-essential qtchooser cmake ninja-build elfutils libelf-dev libdw-dev libasm-dev libzstd-dev
 ```
 ## Build qtcreator
 ```
@@ -33,7 +33,6 @@ EOD
 mkdir  build-qt-creator
 cd build-qt-creator/
 export QT_SELECT=qt5.15.2-opengl
-export LLVM_INSTALL_PREFIX=/usr/lib/llvm-9
 export Qt5_DIR=/usr/lib/qt5.15.2/
 cmake -DPYTHON_EXECUTABLE=/usr/bin/python3 ../qt-creator-opensource-src-4.14.1 | tee qtcreator-cmake.txt
 make -j4
@@ -56,7 +55,7 @@ Priority: optional
 Section: libs
 Bugs: https://github.com/koendv/qt5-opengl-raspberrypi/issues
 Homepage: https://github.com/koendv/qt5-opengl-raspberrypi
-Depends: qt5-opengl-dev, build-essential, qtchooser, cmake, clang-9, libclang-9-dev, clang-format-9, ninja-build, elfutils, libelf-dev, libdw-dev, libasm-dev, libzstd-dev
+Depends: qt5-opengl-dev, build-essential, qtchooser, cmake, ninja-build, elfutils, libelf-dev, libdw-dev, libasm-dev, libzstd-dev
 Architecture: armhf
 Description: qtcreator IDE for Qt5.15.2 LTS with desktop OpenGL
  qtcreator IDE for Qt5.15.2 LTS, compiled on raspberry pi 4 running Raspberry Pi OS 2021-01-11-raspios-buster-armhf (32 bit).

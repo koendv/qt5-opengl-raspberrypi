@@ -6,7 +6,7 @@ This package installs Qt5.15.2 LTS "long term support" with desktop OpenGL , com
 To install, download the [qt5-opengl-dev_5.15.2_armhf.deb](https://github.com/koendv/qt5-opengl-raspberrypi/releases) and type:
 ```
 sudo apt update
-sudo apt --fix-broken  install ./qt5-opengl-dev_5.15.2_armhf.deb
+sudo apt --fix-broken install ./qt5-opengl-dev_5.15.2_armhf.deb
 ```
 This installs Qt5 in ```/usr/lib/qt5.15.2/```.
 
@@ -25,7 +25,7 @@ Install Qt5.15.2 first. Then, to install qt-creator in /usr/local/bin, type:
 
 ```
 wget https://github.com/koendv/qt5-opengl-raspberrypi/releases/download/v5.15.2-1/qt5-opengl-qtcreator_4.14.1_armhf.deb
-sudo apt --fix-broken  install ./qt5-opengl-qtcreator_4.14.1_armhf.deb
+sudo apt --fix-broken install ./qt5-opengl-qtcreator_4.14.1_armhf.deb
 ```
 
 To remove:

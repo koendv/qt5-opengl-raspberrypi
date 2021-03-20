@@ -21,6 +21,7 @@
 -- Looking for pthread_create in pthread
 -- Looking for pthread_create in pthread - found
 -- Found Threads: TRUE  
+-- Could NOT find Clang (missing: Clang_DIR)
 -- Found elfutils: /usr/include  
 -- Found Zstd: /usr/lib/arm-linux-gnueabihf/libzstd.so  
 -- Found PythonInterp: /usr/bin/python3 (found version "3.7.3") 
@@ -40,8 +41,6 @@
  * Qt5SerialPort
  * Qt5Svg
  * Threads
- * LLVM
- * Clang
  * Qt5Concurrent
  * Qt5Gui
  * Qt5Network
@@ -62,6 +61,7 @@
 
 -- The following packages have not been found:
 
+ * Clang
  * KF5SyntaxHighlighting
  * Qt5SvgWidgets
  * Qt5WebEngineWidgets
@@ -126,7 +126,6 @@
  * Plugin AutoTest
  * Plugin AutotoolsProjectManager
  * Plugin BareMetal
- * Plugin ClangCodeModel, with CONDITION TARGET libclang
  * Plugin ClangTools, with CONDITION TARGET yaml-cpp
  * Plugin Cppcheck
  * Plugin IncrediBuild
@@ -163,6 +162,7 @@
  * Plugin ClangPchManager, with CONDITION TARGET libclang AND QTC_CLANG_BUILDMODE_MATCH
  * Plugin ClangFormat, with CONDITION TARGET libclang AND LLVM_PACKAGE_VERSION VERSION_GREATER_EQUAL 10.0.0 AND QTC_CLANG_BUILDMODE_MATCH
  * Plugin ClangRefactoring, with CONDITION TARGET libclang AND QTC_CLANG_BUILDMODE_MATCH
+ * Plugin ClangCodeModel, with CONDITION TARGET libclang
  * multilanguage-support in qml2puppet, with CONDITION TARGET QtCreator::multilanguage-support
  * Rust demangler for perfparser, Requires RUSTC_DEMANGLE_INCLUDE_DIR and RUSTC_DEMANGLE_LIBRARY to be specified
  * Include developer documentation
