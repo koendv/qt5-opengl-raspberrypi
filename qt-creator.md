@@ -18,7 +18,6 @@ wget https://download.qt.io/official_releases/qtcreator/4.14/4.14.1/qt-creator-o
 tar xf qt-creator-opensource-src-4.14.1.tar.xz
 
 patch -p0 <<EOD
-diff -urN qt-creator-opensource-src-4.14.1.ORIG/CMakeLists.txt qt-creator-opensource-src-4.14.1/CMakeLists.txt
 --- qt-creator-opensource-src-4.14.1.ORIG/CMakeLists.txt	2021-02-23 09:29:55.000000000 +0000
 +++ qt-creator-opensource-src-4.14.1/CMakeLists.txt	2021-03-19 13:04:39.696303218 +0000
 @@ -1,5 +1,7 @@
